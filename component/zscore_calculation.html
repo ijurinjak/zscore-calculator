@@ -1,0 +1,165 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/material.css">
+    <link rel="stylesheet" type="text/css" href="../css/zscore_calculation.css">
+</head>
+<script src="zscore_calculation.js"></script>
+<script src="../util/material.js"></script>
+
+
+<body id="forma">
+
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <span class="mdl-layout-title">Z SCORE kalkulator</span>
+                <div class="mdl-layout-spacer"></div>
+            </div>
+        </header>
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <div style="margin-left: 50px">
+                    <table class="table-p-10 b-1-black mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+
+                        <body>
+                            <tr class="tr-p-10">
+                                <td class="td-p-10">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"
+                                            id="tekucaImovina" style="text-align: right">
+                                        <label class="mdl-textfield__label" for="tekucaImovina">Tekuća imovina</label>
+                                        <span class="mdl-textfield__error">Iznos tekuće imovine je neispravan!</span>
+
+                                    </div>
+                                </td>
+                                <td class="td-p-10">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"
+                                            id="netoDobit" style="text-align: right">
+                                        <label class="mdl-textfield__label" for="netoDobit">Neto dobit</label>
+                                        <span class="mdl-textfield__error">Iznos neto dobiti je neispravan!</span>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="tr-p-10">
+                                <td class="td-p-10">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"
+                                            id="tekuceObveze" style="text-align: right">
+                                        <label class="mdl-textfield__label" for="tekuceObveze">Tekuća obveze</label>
+                                        <span class="mdl-textfield__error">Iznos tekućih obveza je neispravan!</span>
+
+                                    </div>
+                                </td>
+                                <td class="td-p-10">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"
+                                            id="kamate" style="text-align: right">
+                                        <label class="mdl-textfield__label" for="kamate">Kamate</label>
+                                        <span class="mdl-textfield__error">Iznos kamata je neispravan!</span>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="tr-p-10">
+                                <td class="td-p-10">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"
+                                            id="ukupnaImovina" style="text-align: right">
+                                        <label class="mdl-textfield__label" for="ukupnaImovina">Ukupna imovina</label>
+                                        <span class="mdl-textfield__error">Iznos ukupne imovine je neispravan!</span>
+
+                                    </div>
+                                </td>
+                                <td class="td-p-10">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"
+                                            id="ukupneObveze" style="text-align: right">
+                                        <label class="mdl-textfield__label" for="ukupneObveze">Ukupne obveze</label>
+                                        <span class="mdl-textfield__error">Iznos ukupnih obveza je neispravan!</span>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="tr-p-10">
+                                <td class="td-p-10">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"
+                                            id="zadrzaniDobici" style="text-align: right">
+                                        <label class="mdl-textfield__label" for="zadrzaniDobici">Zadržani dobici</label>
+                                        <span class="mdl-textfield__error">Iznos zadrzanih dobitaka je neispravan!</span>
+
+                                    </div>
+                                </td>
+                                <td class="td-p-10">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"
+                                            id="porez" style="text-align: right">
+                                        <label class="mdl-textfield__label" for="porez">Porez</label>
+                                        <span class="mdl-textfield__error">Iznos poreza je neispravan!</span>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="tr-p-10">
+                                <td class="td-p-10">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"
+                                            id="trzisnaVrijednostDionica" style="text-align: right">
+                                        <label class="mdl-textfield__label" for="trzisnaVrijednostDionica">Tržišna
+                                            vrijednost
+                                            dionica</label>
+                                        <span class="mdl-textfield__error">Iznos tržišne vrijednosti dionica je
+                                            neispravan!</span>
+
+                                    </div>
+                                </td>
+                                <td class="td-p-10">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"
+                                            id="netoProdaja" style="text-align: right">
+                                        <label class="mdl-textfield__label" for="netoProdaja">Neto prodaja</label>
+                                        <span class="mdl-textfield__error">Iznos neto prodaje je neispravan!</span>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="tr-p-10 b-1-white">
+                                <td colspan="2" class="td-p-10 td-b-1" style="text-align: center">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"
+                                            id="zscore" style="text-align: right;" readonly>
+                                        <label class="mdl-textfield__label" for="zscore">Z SCORE</label>
+                                        <span class="mdl-textfield__error">Iznos zscore je neispravan!</span>
+
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="tr-p-10 b-1-white">
+                                <td colspan="2" class="td-p-10 td-b-1" style="text-align: center">
+                                    <button class="mdl-button mdl-button--colored mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+                                        onclick="calculateZScore()">
+                                        Izračun
+                                    </button>
+                                </td>
+                            </tr>
+                        </body>
+                    </table>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

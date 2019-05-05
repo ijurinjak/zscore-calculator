@@ -1,0 +1,14 @@
+.td-p-10 {padding-left: 10px; padding-right: 10px;}
+.tr-p-10 {padding-top: 10px;}
+.table-p-10 {padding: 10px; }
+
+.td-m-10 {margin-left: 10px; margin-right: 10px;}
+.tr-m-10 {margin-top: 10px; margin-bottom: 10px;}
+.table-m-10 {margin: 10px; }
+
+.b-1-black {border: 1px; border-color: black; background-color: #E8E8E8}
+.b-1-white {border: 1px; border-color: white; background-color: white}
+
+.width-200 {width: 200px}
+
+
